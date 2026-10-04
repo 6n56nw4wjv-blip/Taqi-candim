@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAQI CANDOM | فروشگاه بهداشت و زیبایی بانوان</title>
+  <meta name="description" content="فروشگاه آنلاین TAQI CANDOM برای محصولات بهداشت، مراقبت و زیبایی بانوان">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#"><span>TAQI</span> CANDOM</a>
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 سبد خرید <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">🌸 مخصوص بانوان</span>
+      <h1>زیبایی و مراقبت،<br><strong>با انتخاب درست.</strong></h1>
+      <p>محصولات بهداشتی و مراقبتی بانوان را با تجربه‌ای ساده، شیک و مطمئن از TAQI CANDOM سفارش دهید.</p>
+      <a href="#products" class="primary">مشاهده محصولات ←</a>
+    </div>
+    <div class="hero-card">
+      <div class="hero-circle">🌷</div>
+      <h3>TAQI CANDOM</h3>
+      <p>Care • Beauty • Confidence</p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container feature-grid">
+    <div>🚚 <b>تحویل آسان</b><small>ثبت سفارش سریع</small></div>
+    <div>💎 <b>محصولات منتخب</b><small>انتخاب با دقت</small></div>
+    <div>📞 <b>پشتیبانی</b><small>پاسخ‌گویی به مشتریان</small></div>
+    <div>🔒 <b>خرید محرمانه</b><small>احترام به حریم خصوصی</small></div>
+  </div>
+</section>
+
+<section id="products" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">فروشگاه</span><h2>محصولات ما</h2></div>
+      <input id="search" class="search" type="search" placeholder="جستجوی محصول...">
+    </div>
+    <div class="categories" id="categories">
+      <button class="active" data-cat="all">همه</button>
+      <button data-cat="skincare">مراقبت پوست</button>
+      <button data-cat="haircare">مراقبت مو</button>
+      <button data-cat="hygiene">بهداشت بانوان</button>
+      <button data-cat="beauty">زیبایی</button>
+    </div>
+    <div class="products" id="productsGrid"></div>
+  </div>
+</section>
+
+<section id="about" class="about section">
+  <div class="container about-box">
+    <div><span class="eyebrow">TAQI CANDOM</span><h2>برای مراقبت بهتر از خودت 🌷</h2></div>
+    <p>هدف ما ساختن یک فروشگاه ساده و قابل اعتماد برای دسترسی بانوان به محصولات بهداشتی، مراقبتی و زیبایی است. کیفیت، انتخاب درست و احترام به مشتری برای ما مهم است.</p>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container">
+    <span class="eyebrow">ارتباط با ما</span>
+    <h2>سؤالی دارید؟</h2>
+    <div class="contact-grid">
+      <div>📞 <b>شماره تماس</b><p>07XX XXX XXX</p></div>
+      <div>💬 <b>واتساپ</b><p>برای سفارش و مشاوره پیام دهید</p></div>
+      <div>📍 <b>محدوده ارسال</b><p>کابل و سایر مناطق با هماهنگی</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container"><b>TAQI CANDOM</b><span>© 2026 — همه حقوق محفوظ است.</span></div></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head"><h3>سبد خرید</h3><button id="closeCart">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom">
+    <div><span>مجموع:</span><strong id="cartTotal">0 افغانی</strong></div>
+    <button class="primary full" id="checkoutBtn">ثبت سفارش</button>
+  </div>
+</aside>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">✕</button>
+    <h2>ثبت سفارش 📦</h2>
+    <p class="muted">اطلاعات خود را وارد کنید تا سفارش ثبت شود.</p>
+    <form id="orderForm">
+      <label>نام و نام خانوادگی<input required name="name" placeholder="نام شما"></label>
+      <label>شماره تماس<input required name="phone" placeholder="07XX XXX XXX"></label>
+      <label>آدرس تحویل<textarea required name="address" placeholder="آدرس کامل"></textarea></label>
+      <label>یادداشت (اختیاری)<textarea name="note" placeholder="مثلاً زمان مناسب تحویل"></textarea></label>
+      <button class="primary full" type="submit">تأیید و ثبت سفارش</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
